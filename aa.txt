@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Aalia</title>
+    <style>
+        body {
+            /* Romantic Sunset Gradient */
+            background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.8rem;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 10;
+            margin-bottom: 40px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Floating Hearts Background */
+        .heart {
+            position: absolute;
+            color: rgba(255, 107, 107, 0.4);
+            font-size: 20px;
+            z-index: 0;
+            animation: fly 10s linear infinite;
+            bottom: -50px;
+        }
+
+        .flower {
+            position: relative;
+            animation: sway 5s ease-in-out infinite;
+            transform-origin: bottom center;
+            z-index: 5;
+        }
+
+        .center {
+            width: 70px;
+            height: 70px;
+            background: #4e342e;
+            border-radius: 50%;
+            z-index: 5;
+            position: relative;
+            box-shadow: inset 0 0 20px #2d1b19;
+        }
+
+        .petal {
+            position: absolute;
+            width: 35px;
+            height: 90px;
+            background: #ffc107;
+            border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+            transform-origin: bottom center;
+            bottom: 35px;
+            left: 17.5px;
+            transition: 0.5s;
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+        }
+
+        /* Rotating Petals */
+        .p1 { transform: rotate(0deg); } .p2 { transform: rotate(30deg); }
+        .p3 { transform: rotate(60deg); } .p4 { transform: rotate(90deg); }
+        .p5 { transform: rotate(120deg); } .p6 { transform: rotate(150deg); }
+        .p7 { transform: rotate(180deg); } .p8 { transform: rotate(210deg); }
+        .p9 { transform: rotate(240deg); } .p10 { transform: rotate(270deg); }
+        .p11 { transform: rotate(300deg); } .p12 { transform: rotate(330deg); }
+
+        .stem {
+            width: 8px;
+            height: 200px;
+            background: #388e3c;
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            border-radius: 5px;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-2deg) translateY(0); }
+            50% { transform: rotate(2deg) translateY(-5px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); opacity: 0.9; }
+            50% { transform: translateY(-10px); opacity: 1; }
+        }
+
+        @keyframes fly {
+            0% { transform: translateY(0) rotate(0deg); left: var(--x); opacity: 1; }
+            100% { transform: translateY(-110vh) rotate(360deg); left: var(--x); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Happy Sunflower Day Aalia 🌻</h1>
+
+    <div class="heart" style="--x: 10%; animation-delay: 0s;">❤️</div>
+    <div class="heart" style="--x: 30%; animation-delay: 2s;">❤️</div>
+    <div class="heart" style="--x: 50%; animation-delay: 4s;">❤️</div>
+    <div class="heart" style="--x: 70%; animation-delay: 1s;">❤️</div>
+    <div class="heart" style="--x: 90%; animation-delay: 6s;">❤️</div>
+
+    <div class="flower">
+        <div class="center"></div>
+        <div class="petals">
+            <div class="petal p1"></div><div class="petal p2"></div>
+            <div class="petal p3"></div><div class="petal p4"></div>
+            <div class="petal p5"></div><div class="petal p6"></div>
+            <div class="petal p7"></div><div class="petal p8"></div>
+            <div class="petal p9"></div><div class="petal p10"></div>
+            <div class="petal p11"></div><div class="petal p12"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+</body>
+</html>
